@@ -15,6 +15,8 @@ previously-seen chain (#3152).
 
 ## [2.05.0.2.0]
 
+- Updates to the logging of transaction events (#3139).
+
 ### IMPORTANT! READ THIS FIRST
 
 Please read the following **WARNINGs** in their entirety before upgrading.
