@@ -5,13 +5,27 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to the versioning scheme outlined in the [README.md](README.md).
 
+## [2.05.0.3.0]
+
+This software update is a point-release for improvements to miner
+behavior. This release's chainstate directory is compatible with
+chainstate directories from 2.05.0.2.1.
+
+### Fixed
+
+- Fixed default miner behavior regarding block assembly
+  attempts. Previously, the miner would only attempt to assemble a
+  larger block after their first attempt (by Bitcoin RBF) if new
+  microblock or block data arrived. This changes the miner to always
+  attempt a second block assembly (#3184).
+
 ## [2.05.0.2.1]
 
 ### Fixed
 - Fixed a security bug in the SPV client whereby the chain work was not being
   considered at all when determining the canonical Bitcoin fork.  The SPV client
-now only accepts a new Bitcoin fork if it has a higher chain work than any other
-previously-seen chain (#3152).
+  now only accepts a new Bitcoin fork if it has a higher chain work than any other
+  previously-seen chain (#3152).
 
 ## [2.05.0.2.0]
 
